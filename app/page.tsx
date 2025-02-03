@@ -1,9 +1,9 @@
-
 "use client";
 
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
-
+import Image from "next/image";
+import pbImg from '../public/1729072580016.jpg'
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
@@ -58,8 +58,8 @@ export default function Home() {
             <div className="flex flex-col md:flex-row items-center">
               {/* Left Side: Round Image */}
               <div className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden shadow-lg mb-8 md:mb-0 md:mr-12">
-                <img
-                    src="/app/1729072580016.jpg" // Ersetze dies mit dem Pfad zu deinem Bild
+                <Image
+                    src={pbImg} // Ersetze dies mit dem Pfad zu deinem Bild
                     alt="Laurenz Szepan"
                     className="w-full h-full object-cover"
                 />
@@ -68,7 +68,7 @@ export default function Home() {
               {/* Right Side: Text and Buttons */}
               <div className="text-center md:text-left">
                 <h1 className={`text-4xl md:text-5xl font-bold ${darkMode ? 'text-gray-100' : 'text-gray-800'}`}>
-                  Hey, I am <br /> <span className="text-indigo-500">Laurenz</span>
+                  Hey, ich bin <br /> <span className="text-indigo-500">Laurenz</span>
                 </h1>
                 <p className={`mt-4 text-xl ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
                   Verwaltungsinformatiker.
@@ -124,7 +124,7 @@ export default function Home() {
                     </div>
                     <h3 className={`ml-4 text-xl font-bold ${darkMode ? 'text-gray-100' : 'text-gray-800'}`}>Kurswahloptimierer</h3>
                   </div>
-                  <p className={`mt-2 ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>Automatisierte zuweisung von Wahlpflichtmodulen.</p>
+                  <p className={`mt-2 ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>Automatisierte zuweisung von Wahlpflichtmodulen. Programmiert in Java. </p>
                 </div>
               </Link>
 
@@ -142,23 +142,6 @@ export default function Home() {
                     <h3 className={`ml-4 text-xl font-bold ${darkMode ? 'text-gray-100' : 'text-gray-800'}`}>Gerätedatenbank</h3>
                   </div>
                   <p className={`mt-2 ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>Eine Gerätedatenbank erstellt mit C#.</p>
-                </div>
-              </Link>
-
-              {/* Project Card 3 */}
-              <Link href="/project-3">
-                <div className={`p-6 rounded-lg shadow-lg cursor-pointer transition duration-300 ${darkMode ? 'bg-gray-800 hover:bg-gray-700' : 'bg-white hover:bg-gray-100'}`}>
-                  <div className="flex items-center">
-                    <div className="w-12 h-12 flex items-center justify-center">
-                      <img
-                          src="favicon.ico" // Ersetze dies mit dem Pfad zu deinem Icon
-                          alt="Project Icon"
-                          className="w-6 h-6"
-                      />
-                    </div>
-                    <h3 className={`ml-4 text-xl font-bold ${darkMode ? 'text-gray-100' : 'text-gray-800'}`}>Projekt 3</h3>
-                  </div>
-                  <p className={`mt-2 ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>Eine kurze Beschreibung deines Projekts.</p>
                 </div>
               </Link>
             </div>
